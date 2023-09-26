@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <div>
 
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
+  <section className="container-fluid">
     <a className="navbar-brand" href="#">Full Stack CRUD Application</a>
     <button
     className="navbar-toggler"
@@ -16,8 +17,8 @@ export default function Navbar() {
     aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <button className="btn btn-outline-light">Add User</button>
-  </div>
+    <Link className="btn btn-outline-light" to="/adduser">Add User</Link>
+  </section>
 </nav>
 
 
