@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function AddUser() {
+
+  // storing user info
+
+  const [user, setUser] = useState({
+    name: "",
+    username: "",
+    email: ""
+  });
+
+  const {name, username, email} = user;
+
+  const onInputChange=(event) => {
+    setUser({...user, [event.target.name]:event.target.value})
+  }
   return (
     <aside className="container">
       <section className="row">
@@ -14,7 +28,9 @@ export default function AddUser() {
             type={"text"}
             className="form-control"
             placeholder='Enter name'
-            name="Name"
+            name="name"
+            value = {name}
+            onChange = {(event) => onInputChange(event)}
             />
           </section>
 
@@ -26,7 +42,9 @@ export default function AddUser() {
             type={"text"}
             className="form-control"
             placeholder='Enter username'
-            name="Username"
+            name="username"
+            value = {username}
+            onChange = {(event) => onInputChange(event)}
             />
           </section>
 
@@ -38,7 +56,9 @@ export default function AddUser() {
             type={"text"}
             className="form-control"
             placeholder='Enter email'
-            name="Email"
+            name="email"
+            value = {email}
+            onChange = {(event) => onInputChange(event)}
             />
           </section>
 
