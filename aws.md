@@ -18,4 +18,4 @@ Public IP address: 3.14.251.109
 - Create EC2 instance and connect to it using SSH
 - Install JDK if java or npm if Node
 - Build spring boot project into Jar file and move it to EC2
-- Connect front end to
+- Create build file and connect it to S3 Bucket

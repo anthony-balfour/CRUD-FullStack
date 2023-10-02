@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
 
-  const BASE_URL = "http://localhost:8080";
+  const BASE_URL = "http://3.14.251.109:8080";
 
   // to store user information
   const [users, setUsers] = useState([]);

@@ -4,7 +4,7 @@ import {Link, useNavigate } from 'react-router-dom'
 
 export default function AddUser() {
 
-  const BASE_URL = "http://localhost:8080";
+  const BASE_URL = "http://3.14.251.109:8080";
   let navigate = useNavigate();
 
   // storing user info
