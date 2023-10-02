@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 
 export default function Home() {
 
+  const BASE_URL = "http://localhost:8080";
+
   // to store user information
   const [users, setUsers] = useState([]);
 
@@ -18,12 +20,12 @@ export default function Home() {
 
   const loadUsers  = async () => {
     // getting with the specified path
-    const result = await axios.get("http://localhost:8080/users");
+    const result = await axios.get(BASE_URL + "/users");
    setUsers(result.data);
   }
 
   const deleteUser = async(id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
+    await axios.delete(`${BASE_URL}/user/${id}`);
     loadUsers();
   }
 

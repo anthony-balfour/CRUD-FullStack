@@ -4,6 +4,7 @@ import {Link, useNavigate } from 'react-router-dom'
 
 export default function AddUser() {
 
+  const BASE_URL = "http://localhost:8080";
   let navigate = useNavigate();
 
   // storing user info
@@ -23,7 +24,7 @@ export default function AddUser() {
   const onSubmit = async (event) => {
     event.preventDefault();
     // using axios to post the data to the database
-    await axios.post("http://localhost:8080/user", user);
+    await axios.post(BASE_URL + "/user", user);
 
     // navigate to home page
     navigate("/");

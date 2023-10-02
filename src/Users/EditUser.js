@@ -4,6 +4,8 @@ import {Link, useNavigate, useParams } from 'react-router-dom'
 
 export default function EditUser() {
 
+  const BASE_URL = "http://localhost:8080"
+
   let navigate = useNavigate();
 
   const {id} = useParams();
@@ -30,7 +32,7 @@ export default function EditUser() {
     event.preventDefault();
     // using axios to put the data in the database
     // gets the id from the current Route param
-    await axios.put(`http://localhost:8080/user/${id}`, user);
+    await axios.put(`${BASE_URL}/user/${id}`, user);
 
     // navigate to home page
     navigate("/");
@@ -39,7 +41,7 @@ export default function EditUser() {
   // loading the data for the user
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/user/${id}`);
+    const result = await axios.get(`${BASE_URL}/user/${id}`);
     setUser(result.data);
   }
 
