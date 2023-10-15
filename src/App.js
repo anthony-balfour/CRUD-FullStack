@@ -4,7 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 // Importing React Router
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Navbar from './Layout/Navbar/navbar';
-import Home from './Pages/home';
+import Home from './Pages/Home/home';
 import AddUser from './Users/AddUser';
 import EditUser from './Users/EditUser';
 import ViewUser from './Users/ViewUser';

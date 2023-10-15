@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { Link, useParams } from 'react-router-dom';
+import "./home.css";
 
 export default function Home() {
 
@@ -38,7 +39,7 @@ export default function Home() {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Username</th>
-            <th scope="col">Email</th>
+            <th scope="col" className="email">Email</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -50,7 +51,7 @@ export default function Home() {
                 <th scope="row" key={index}>{index + 1}</th>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
-                <td>{user.email}</td>
+                <td className="email">{user.email}</td>
                 <td>
                   <Link to={`/viewuser/${user.id}`} className="btn btn-primary mx-2">View</Link>
                   <Link to={`/edituser/${user.id}`} className="btn btn-success mx-2">Edit</Link>
