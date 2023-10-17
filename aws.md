@@ -41,6 +41,7 @@ Example:
  - Create s3 bucket and allow all public access
  - change permissions bucket policy
 -  post the following code into the bucket policy
+
  ```
  {
     "Version": "2012-10-17",
@@ -58,6 +59,7 @@ Example:
 
  - allow static website hosting
  - upload files
+ - enable static website hosting
 
 # Steps
 
