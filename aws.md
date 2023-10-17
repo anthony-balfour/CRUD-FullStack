@@ -33,7 +33,31 @@ Example:
 
  #### Running jar file constantly on server
 
- ‘nohup java -jar ~jar file~ > output.log &’ 
+ ‘nohup java -jar ~jar file~ > output.log &’
+
+ # S3 Bucket
+
+ - npm run build to generate build file
+ - Create s3 bucket and allow all public access
+ - change permissions bucket policy
+-  post the following code into the bucket policy
+ ```
+ {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::yourbucketname/*"
+        }
+    ]
+}
+ ```
+
+ - allow static website hosting
+ - upload files
 
 # Steps
 
