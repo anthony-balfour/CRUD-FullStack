@@ -5,6 +5,7 @@ import "./home.css";
 
 export default function Home() {
 
+  // ip address of ec2 instance I believe
   const BASE_URL = "http://3.14.251.109:8080";
 
   // to store user information
