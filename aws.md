@@ -29,6 +29,9 @@ Example:
  #### Moving JAR file
 
  scp -i "E:/Engineering/Spring Boot/student-system/CRUDFullStack.pem" student-system-0.0.1-SNAPSHOT.jar ec2-3-14-251-109.us-east-2.compute.amazonaws.com:/home/ec2-user
+ s
+ scp -i E:/Engineering/Master/Github/flight-reserve-backend/CRUDFullStack.pem -r flight-reserve-backend ec2-user@ec2-3-14-251-109.us-east-2.compute.amazonaws.com:/home/ec2-user
+ Github\CRUD\crud-front\backend\CRUDFullStack.pem
 
 
  #### Running jar file constantly on server
