@@ -30,8 +30,16 @@ Example:
 
  scp -i "E:/Engineering/Spring Boot/student-system/CRUDFullStack.pem" student-system-0.0.1-SNAPSHOT.jar ec2-3-14-251-109.us-east-2.compute.amazonaws.com:/home/ec2-user
  s
+
+ ### Moving Expedia app to EC2 instance
  scp -i E:/Engineering/Master/Github/flight-reserve-backend/CRUDFullStack.pem -r flight-reserve-backend ec2-user@ec2-3-14-251-109.us-east-2.compute.amazonaws.com:/home/ec2-user
+
  Github\CRUD\crud-front\backend\CRUDFullStack.pem
+
+ scp -i E:/Engineering/Master/Github/flight-reserve-backend/CRUDFullStack.pem Dockerfile ec2-user@ec2-3-14-251-109.us-east-2.compute.amazonaws.com:/home/ec2-user/2048Docker
+
+ Github\CRUD\crud-front\backend\CRUDFullStack.pem
+
 
 
  #### Running jar file constantly on server
