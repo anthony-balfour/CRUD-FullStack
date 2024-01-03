@@ -46,7 +46,11 @@ Example:
  #### Running jar file constantly on server
 
  ‘nohup java -jar ~jar file~ > output.log &’
+
+#### Running the User Management app in detached mode
  nohup java -jar fullstack-backend-0.0.1-SNAPSHOT.jar > output.log &
+
+#### Running the student management app in detached mode
  student-system-0.0.1-SNAPSHOT.jar
  nohup java -jar student-system-0.0.1-SNAPSHOT.jar > output.log &
 
